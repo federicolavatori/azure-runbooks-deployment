@@ -1,0 +1,20 @@
+trigger:
+- main
+ 
+pool:
+  name: prAgentPool-DataScience
+
+steps:
+
+- script: |
+    git checkout main
+    ls .
+  displayName: 'Get Develop Branch'
+
+- checkout: self
+  persistCredentials: true
+  clean: true
+  displayName: 'Get Latest Updates'
+
+- pwsh: ./scripts/run.ps1 -ResourceGroupName $(ResourceGroupName) -ServicePrincipalName $(ServicePrincipalName) -ServicePrincipalPass $(ServicePrincipalPass) -SubscriptionId $(SubscriptionId) -TenantId $(TenantId) -Verbose
+  displayName: 'Deploy Runbooks'
