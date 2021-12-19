@@ -7,3 +7,8 @@ The folder scripts contain the main script (run.ps1) supposed to deploy the runb
 # Deployment
 CI/CD Pipelines triggered by st-azure-pipeline.yml (staging environment) as well as pr-azure-pipeline.yml (production environment)
 
+# Reference
+https://scriptingchris.tech/2021/07/11/how-to-deploy-azure-automation-runbooks-with-source-control-through-azure-devops/
+https://www.miru.ch/using-azure-devops-pipelines-with-azure-automation/
+http://sqlitybi.com/how-to-update-runbook-schedule-parameters-after-creation/
+
